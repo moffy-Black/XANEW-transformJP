@@ -1,0 +1,14 @@
+version: '3'
+services:
+    lda:
+        restart: always
+        build: .
+        container_name: 'lda_test'
+        working_dir: '/root/'
+        # command: bash -c "chmod 777 /root/app/scripts/run.sh && /root/app/scripts/run.sh"
+        tty: true
+        volumes:
+            - ./src:/root/src
+            - ./model:/root/model
+        ports:
+            - "8080:8080"
