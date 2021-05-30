@@ -2,3 +2,5 @@ numpy
 matplotlib
 pandas
 gensim
+selenium
+pyperclip
